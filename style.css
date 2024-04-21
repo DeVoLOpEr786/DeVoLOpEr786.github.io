@@ -1,0 +1,102 @@
+/* Add your custom styles here */
+/* For example, centering the home page text */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* Creamy background color */
+.bg-cream {
+    background-color: #f9f5e8;
+}
+
+/* Back button styling */
+.btn-back {
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #1abc9c; /* Lighter green on hover */
+}
+/* Add your custom styles here */
+/* For example, centering the home page text */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* Creamy background color */
+.bg-cream {
+    background-color: #f9f5e8;
+}
+
+/* Back button styling */
+.btn-back {
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #1abc9c; /* Lighter green on hover */
+}
+
+/* Glow effect for skills */
+.text-glow {
+    text-shadow: 0 0 10px rgba(26, 188, 156, 0.8);
+}
+/* Add your custom styles here */
+/* For example, centering the home page text */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* Creamy background color */
+.bg-cream {
+    background-color: #f9f5e8;
+}
+
+/* Back button styling */
+.btn-back {
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #1abc9c; /* Lighter green on hover */
+}
+/* Add your custom styles here */
+/* For example, centering the home page text */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* Creamy background color */
+.bg-cream {
+    background-color: #f9f5e8;
+}
+
+/* Back button styling */
+.btn-back {
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #1abc9c; /* Lighter green on hover */
+}
+
+/* Glow effect for skills */
+.text-glow {
+    text-shadow: 0 0 10px rgba(26, 188, 156, 0.8);
+}
