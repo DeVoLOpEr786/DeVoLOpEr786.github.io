@@ -21,82 +21,40 @@
 .btn-back:hover {
     background-color: #1abc9c; /* Lighter green on hover */
 }
-/* Add your custom styles here */
-/* For example, centering the home page text */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-}
-
-/* Creamy background color */
-.bg-cream {
-    background-color: #f9f5e8;
-}
-
-/* Back button styling */
-.btn-back {
-    transition: background-color 0.3s;
-}
-
-.btn-back:hover {
-    background-color: #1abc9c; /* Lighter green on hover */
-}
 
 /* Glow effect for skills */
 .text-glow {
     text-shadow: 0 0 10px rgba(26, 188, 156, 0.8);
 }
-/* Add your custom styles here */
-/* For example, centering the home page text */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Creamy background color */
-.bg-cream {
-    background-color: #f9f5e8;
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-/* Back button styling */
-.btn-back {
-    transition: background-color 0.3s;
+.animate-fade-in {
+  animation: fadeIn 2s ease-in-out;
 }
 
-.btn-back:hover {
-    background-color: #1abc9c; /* Lighter green on hover */
-}
-/* Add your custom styles here */
-/* For example, centering the home page text */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
+.animate-slide-in {
+  animation: slideIn 1.5s ease-out;
 }
 
-/* Creamy background color */
-.bg-cream {
-    background-color: #f9f5e8;
-}
-
-/* Back button styling */
-.btn-back {
-    transition: background-color 0.3s;
-}
-
-.btn-back:hover {
-    background-color: #1abc9c; /* Lighter green on hover */
-}
-
-/* Glow effect for skills */
-.text-glow {
-    text-shadow: 0 0 10px rgba(26, 188, 156, 0.8);
-}
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+   [_{{{CITATION{{{_1{](https://github.com/watchping/vue-course/tree/6a60dc019287a13859793f1ec7fef84dc41aa2b9/temp.md)[_{{{CITATION{{{_2{](https://github.com/dhasane/admin-bd/tree/a61cf1d0b4d1f546383e37095ad8b83c0dc33b33/pantallas%2FpantallaElementosQueLePertenecen.php)[_{{{CITATION{{{_3{](https://github.com/krishnadheerajp/krishnadheerajp.github.io/tree/0e41803e74609647f6b1c76c9c162c40777b523e/GRIP%20%20Internship%2Ftransfer.php)
