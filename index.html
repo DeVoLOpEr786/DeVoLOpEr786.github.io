@@ -1,33 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <title>Sahil Rizwan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Shaik Sahil Rizwan — AI Engineer specializing in Generative AI, Agentic AI, MCP, RAG, LLMs and FastAPI.">
+
+    <title>Shaik Sahil Rizwan | AI Engineer</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-cream">
-  <nav class="navbar bg-green-500 p-4 sticky top-0">
-    <div class="container mx-auto flex justify-center items-center space-x-4">
-      <a href="#" class="nav-link text-white font-semibold hover:underline">Home</a>
-      <a href="Education.html" class="nav-link text-white font-semibold hover:underline">Education</a>
-      <a href="Projects.html" class="nav-link text-white font-semibold hover:underline">Projects</a>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-symbol">&lt;/&gt;</span>
+            Sahil<span>.</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
     </div>
-  </nav>
+</nav>
 
-  <div class="container mx-auto p-8">
-    <h1 class="text-center text-4xl font-semibold mb-4 animate-bounce">Shaik Sahil Rizwan</h1>
-    <p class="text-center text-lg animate-fade-in">
-      Enthusiastic student with a passion for Computer Science and technology. Demonstrated ability to work
-      independently and collaboratively in various settings. Aiming to apply academic knowledge and skills in an
-      internship role that offers learning and growth opportunities.
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            AI Engineer · Building intelligent systems
+        </div>
+
+        <p class="hero-intro">
+            Hi, I'm
+        </p>
+
+        <h1>
+            Shaik Sahil
+            <span>Rizwan.</span>
+        </h1>
+
+        <h2>
+            AI Engineer building systems that
+            <span id="typing-text">reason</span>
+        </h2>
+
+        <p class="hero-description">
+            I build production-oriented Generative AI and agentic systems
+            using LLMs, RAG, MCP, tool calling and Python. Currently working
+            on enterprise AI solutions at BNP Paribas ISPL.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#experience" class="btn btn-primary">
+                Explore my work →
+            </a>
+
+            <a href="projects.html" class="btn btn-secondary">
+                View projects
+            </a>
+
+        </div>
+
+        <div class="hero-socials">
+
+            <a href="https://github.com/shaiksahilrizwan"
+               target="_blank">
+                GitHub ↗
+            </a>
+
+            <a href="https://www.linkedin.com/in/shaik-sahil-rizwan/"
+               target="_blank">
+                LinkedIn ↗
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-terminal">
+
+        <div class="terminal-window">
+
+            <div class="terminal-header">
+
+                <div class="terminal-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span>ai_engineer.py</span>
+
+            </div>
+
+            <div class="terminal-body">
+
+<pre><span class="keyword">class</span> <span class="class-name">AIEngineer</span>:
+
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+
+        self.name = <span class="string">"Sahil Rizwan"</span>
+
+        self.focus = [
+            <span class="string">"Generative AI"</span>,
+            <span class="string">"Agentic AI"</span>,
+            <span class="string">"MCP"</span>,
+            <span class="string">"RAG"</span>
+        ]
+
+        self.stack = [
+            <span class="string">"Python"</span>,
+            <span class="string">"LangChain"</span>,
+            <span class="string">"FastAPI"</span>,
+            <span class="string">"FastMCP"</span>
+        ]
+
+    <span class="keyword">def</span> <span class="function">build</span>(self):
+        <span class="keyword">return</span> <span class="string">"AI systems that work."</span></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            01 / ABOUT
+        </div>
+
+        <div class="about-grid">
+
+            <div>
+
+                <h2 class="section-title">
+                    From LLMs to
+                    <span>agents that act.</span>
+                </h2>
+
+            </div>
+
+            <div class="about-text">
+
+                <p>
+                    I'm an AI Engineer focused on building Generative AI
+                    applications and agentic workflows that connect LLMs
+                    with real-world tools, data and enterprise systems.
+                </p>
+
+                <p>
+                    At BNP Paribas ISPL, I've worked on AI agents,
+                    Model Context Protocol (MCP) integrations, RAG
+                    pipelines, FastAPI services and enterprise AI
+                    proof-of-concepts.
+                </p>
+
+                <p>
+                    My work sits at the intersection of
+                    <strong>LLM reasoning, tool orchestration,
+                    retrieval and backend engineering.</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience" class="section section-dark">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            02 / EXPERIENCE
+        </div>
+
+        <div class="experience-card">
+
+            <div class="experience-top">
+
+                <div>
+
+                    <h2>
+                        AI Engineer Analyst
+                    </h2>
+
+                    <p class="company">
+                        BNP Paribas ISPL
+                    </p>
+
+                </div>
+
+                <div class="experience-date">
+                    IT Intern → Analyst
+                </div>
+
+            </div>
+
+            <div class="experience-line"></div>
+
+            <div class="experience-grid">
+
+                <div class="experience-item">
+
+                    <span class="number">01</span>
+
+                    <div>
+
+                        <h3>WCAG Compliance AI Agent</h3>
+
+                        <p>
+                            Designed an agentic workflow capable of
+                            investigating websites, invoking specialized
+                            tools, gathering evidence and supporting
+                            WCAG compliance assessment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <span class="number">02</span>
+
+                    <div>
+
+                        <h3>MCP Tool Orchestration</h3>
+
+                        <p>
+                            Built custom MCP tools and servers using
+                            FastMCP, supporting both stdio and remote
+                            architectures for agent-invokable
+                            website analysis capabilities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <span class="number">03</span>
+
+                    <div>
+
+                        <h3>Enterprise AI Integrations</h3>
+
+                        <p>
+                            Developed a remote JIRA MCP server and
+                            contributed a Java Spring AI database MCP
+                            server for internal AI-assisted development
+                            workflows.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <span class="number">04</span>
+
+                    <div>
+
+                        <h3>AI Backend Engineering</h3>
+
+                        <p>
+                            Developed Python and FastAPI services
+                            supporting AI workflows, MCP integrations,
+                            API communication and enterprise data
+                            processing.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= AI STACK ================= -->
+
+<section id="skills" class="section">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            03 / TECHNICAL ARSENAL
+        </div>
+
+        <h2 class="section-title">
+            The tools behind
+            <span>the systems.</span>
+        </h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <span class="skill-number">01</span>
+
+                <h3>Generative AI</h3>
+
+                <p>
+                    LLMs · AI Agents · Agentic Workflows ·
+                    Tool Calling · Prompt Engineering
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <span class="skill-number">02</span>
+
+                <h3>Retrieval</h3>
+
+                <p>
+                    RAG · Embeddings · Semantic Retrieval ·
+                    Vector Search · ChromaDB
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <span class="skill-number">03</span>
+
+                <h3>MCP</h3>
+
+                <p>
+                    Model Context Protocol · FastMCP ·
+                    MCP Servers · MCP Tools · Tool Integration
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <span class="skill-number">04</span>
+
+                <h3>Backend</h3>
+
+                <p>
+                    Python · FastAPI · REST APIs ·
+                    API Integration · Data Processing
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <span class="skill-number">05</span>
+
+                <h3>Programming</h3>
+
+                <p>
+                    Python · Java · SQL · R
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <span class="skill-number">06</span>
+
+                <h3>Cloud & Data</h3>
+
+                <p>
+                    AWS · Azure · MySQL · NoSQL ·
+                    Relational Databases
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURED PROJECT ================= -->
+
+<section class="section section-dark">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            04 / FEATURED PROJECT
+        </div>
+
+        <div class="featured-project">
+
+            <div class="featured-content">
+
+                <span class="project-tag">
+                    OPEN SOURCE · PYTHON · MCP
+                </span>
+
+                <h2>
+                    stdio-mysql-mcp
+                </h2>
+
+                <p>
+                    An open-source Python MCP server that enables
+                    AI applications and LLM-based agents to interact
+                    with MySQL databases through standardized MCP tools.
+                </p>
+
+                <div class="tech-tags">
+
+                    <span>Python</span>
+                    <span>MCP</span>
+                    <span>MySQL</span>
+                    <span>LLM</span>
+
+                </div>
+
+                <a href="https://github.com/shaiksahilrizwan"
+                   target="_blank"
+                   class="project-link">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+            <div class="featured-code">
+
+<pre>
+AI Agent
+    │
+    ▼
+┌───────────────┐
+│  MCP Client   │
+└───────┬───────┘
+        │
+        ▼
+┌───────────────┐
+│ MySQL MCP     │
+│ Server        │
+└───────┬───────┘
+        │
+        ▼
+     MySQL DB
+</pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="section">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            05 / EDUCATION
+        </div>
+
+        <div class="education-card">
+
+            <div>
+
+                <span class="education-year">
+                    2022 — 2026
+                </span>
+
+                <h2>
+                    Bachelor of Technology
+                </h2>
+
+                <p>
+                    Computer Science & Engineering
+                </p>
+
+                <p class="institution">
+                    Vellore Institute of Technology – AP
+                    University, Amaravati
+                </p>
+
+            </div>
+
+            <div class="cgpa">
+
+                <span>CGPA</span>
+
+                <strong>9.17</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section class="section section-dark">
+
+    <div class="section-container">
+
+        <div class="section-label">
+            06 / CERTIFICATIONS
+        </div>
+
+        <div class="cert-grid">
+
+            <div class="cert-card">
+                <span>01</span>
+                <h3>Python Professional Certificate</h3>
+                <p>OpenEDG Python Institute</p>
+            </div>
+
+            <div class="cert-card">
+                <span>02</span>
+                <h3>AWS Certified Cloud Practitioner</h3>
+                <p>Amazon Web Services</p>
+            </div>
+
+            <div class="cert-card">
+                <span>03</span>
+                <h3>Azure Fundamentals</h3>
+                <p>Microsoft</p>
+            </div>
+
+            <div class="cert-card">
+                <span>04</span>
+                <h3>MySQL 8.0 Database Developer</h3>
+                <p>Oracle</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="contact-content">
+
+        <div class="section-label">
+            07 / CONTACT
+        </div>
+
+        <h2>
+            Let's build something
+            <span>intelligent.</span>
+        </h2>
+
+        <p>
+            Interested in AI agents, MCP, GenAI or building
+            practical AI systems? Let's connect.
+        </p>
+
+        <div class="contact-buttons">
+
+            <a href="https://www.linkedin.com/in/shaik-sahil-rizwan/"
+               target="_blank"
+               class="btn btn-primary">
+                LinkedIn →
+            </a>
+
+            <a href="https://github.com/shaiksahilrizwan"
+               target="_blank"
+               class="btn btn-secondary">
+                GitHub →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Shaik Sahil Rizwan
     </p>
-  </div>
 
-  <div class="fixed bottom-4 right-4">
-    <a href="https://www.linkedin.com/in/shaik-sahil-rizwan/"
-      class="btn-back bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded shadow">Contact</a>
-  </div>
+    <p>
+        Built with HTML · CSS · JavaScript
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
