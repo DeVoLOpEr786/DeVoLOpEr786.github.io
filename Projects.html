@@ -8,748 +8,1105 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Projects by Shaik Sahil Rizwan — AI Engineer working with MCP, RAG, LLMs, FastAPI and Generative AI.">
+    <title>Sahil Rizwan — Projects</title>
 
-    <title>Projects | Shaik Sahil Rizwan</title>
-
+    <!-- Windows 7 CSS -->
     <link rel="stylesheet"
-          href="styles.css">
+          href="https://unpkg.com/7.css">
+
+    <!-- Our custom Windows 7 portfolio CSS -->
+    <link rel="stylesheet"
+          href="projects-win7.css">
 
 </head>
 
 
-<body>
+<body class="win7-desktop">
 
 
 <!-- =====================================================
-     NAVBAR
+     DESKTOP
      ===================================================== -->
 
-<nav class="navbar">
+<div class="desktop">
 
-    <div class="nav-container">
+
+    <!-- Desktop Icons -->
+
+    <div class="desktop-icons">
+
 
         <a href="index.html"
-           class="logo">
+           class="desktop-icon">
 
-            <span class="logo-symbol">&lt;/&gt;</span>
-            Sahil<span>.</span>
+            <div class="icon-image computer-icon">
+                💻
+            </div>
+
+            <span>
+                My Portfolio
+            </span>
 
         </a>
 
 
-        <div class="nav-links">
+        <a href="https://github.com/shaiksahilrizwan"
+           target="_blank"
+           class="desktop-icon">
 
-            <a href="index.html">
-                Home
-            </a>
+            <div class="icon-image folder-icon">
+                📁
+            </div>
 
-            <a href="index.html#experience">
-                Experience
-            </a>
+            <span>
+                GitHub
+            </span>
 
-            <a href="Projects.html">
-                Projects
-            </a>
-
-            <a href="index.html#skills">
-                Skills
-            </a>
-
-            <a href="index.html#contact">
-                Contact
-            </a>
-
-        </div>
+        </a>
 
 
-        <button class="menu-button"
-                id="menuButton">
+        <button class="desktop-icon"
+                onclick="openAbout()">
 
-            ☰
+            <div class="icon-image info-icon">
+                ℹ️
+            </div>
+
+            <span>
+                About Me
+            </span>
 
         </button>
 
+
     </div>
 
-</nav>
 
 
+    <!-- =================================================
+         MAIN PROJECTS WINDOW
+         ================================================= -->
 
-<!-- =====================================================
-     PROJECT HERO
-     ===================================================== -->
-
-<section class="project-page-hero">
-
-    <div class="hero-grid"></div>
+    <div class="window glass active-window"
+         id="projectsWindow">
 
 
-    <div class="project-page-content">
+        <div class="title-bar">
 
-        <div class="status-badge">
+            <div class="title-bar-text">
 
-            <span class="status-dot"></span>
+                <span class="window-app-icon">
+                    📁
+                </span>
 
-            BUILDING · EXPERIMENTING · OPEN SOURCE
+                Sahil Rizwan — Projects
+
+            </div>
+
+
+            <div class="title-bar-controls">
+
+                <button aria-label="Minimize"
+                        onclick="minimizeProjects()">
+                </button>
+
+                <button aria-label="Maximize"
+                        onclick="toggleMaximize()">
+                </button>
+
+                <button aria-label="Close"
+                        onclick="closeProjects()">
+                </button>
+
+            </div>
 
         </div>
 
 
-        <p class="hero-intro">
-            03 / PROJECTS
-        </p>
+
+        <div class="window-body has-space">
 
 
-        <h1>
+            <!-- Toolbar -->
 
-            Things I've
-            <span>built.</span>
+            <div class="win-toolbar">
 
-        </h1>
+                <button onclick="goHome()">
+                    ← Back
+                </button>
+
+                <button onclick="showAllProjects()">
+                    🔄 Refresh
+                </button>
+
+                <div class="toolbar-path">
+
+                    📁 Computer
+                    <span>›</span>
+                    Projects
+
+                </div>
+
+            </div>
 
 
-        <p>
 
-            A collection of AI systems, developer tools,
-            backend services and experiments focused on
-            Generative AI, agentic workflows, MCP and
-            retrieval-augmented systems.
+            <!-- Address -->
 
-        </p>
+            <div class="address-bar">
+
+                <span class="address-label">
+                    Address
+                </span>
+
+                <input type="text"
+                       value="C:\Users\Sahil\Projects"
+                       readonly>
+
+            </div>
 
 
-        <div class="project-page-links">
+
+            <!-- Main Explorer -->
+
+            <div class="explorer">
+
+
+                <!-- Sidebar -->
+
+                <aside class="explorer-sidebar">
+
+                    <div class="sidebar-title">
+                        Favorites
+                    </div>
+
+
+                    <button onclick="filterProjects('all')"
+                            class="sidebar-link active">
+
+                        ⭐ All Projects
+
+                    </button>
+
+
+                    <button onclick="filterProjects('ai')"
+                            class="sidebar-link">
+
+                        🤖 AI & Agents
+
+                    </button>
+
+
+                    <button onclick="filterProjects('mcp')"
+                            class="sidebar-link">
+
+                        🔌 MCP
+
+                    </button>
+
+
+                    <button onclick="filterProjects('rag')"
+                            class="sidebar-link">
+
+                        📚 RAG
+
+                    </button>
+
+
+                    <button onclick="filterProjects('backend')"
+                            class="sidebar-link">
+
+                        ⚙️ Backend
+
+                    </button>
+
+
+                    <div class="sidebar-title sidebar-second">
+                        Other Places
+                    </div>
+
+
+                    <a href="https://github.com/shaiksahilrizwan"
+                       target="_blank"
+                       class="sidebar-link">
+
+                        🌐 GitHub
+
+                    </a>
+
+
+                    <a href="index.html"
+                       class="sidebar-link">
+
+                        🏠 Home
+
+                    </a>
+
+                </aside>
+
+
+
+                <!-- Project Area -->
+
+                <main class="project-area">
+
+
+                    <div class="project-area-header">
+
+                        <div>
+
+                            <h1>
+                                Projects
+                            </h1>
+
+                            <p>
+                                AI systems, developer tools and experiments
+                            </p>
+
+                        </div>
+
+
+                        <span id="projectCount">
+                            6 projects
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="project-grid"
+                         id="projectGrid">
+
+
+                        <!-- =================================
+                             PROJECT 1
+                             ================================= -->
+
+                        <button class="project-item"
+                                data-category="ai mcp"
+                                onclick="openProject('mysql-mcp')">
+
+                            <div class="project-icon">
+                                🗄️
+                            </div>
+
+                            <div class="project-info">
+
+                                <h2>
+                                    stdio-mysql-mcp
+                                </h2>
+
+                                <p>
+                                    Python MCP server for MySQL
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span>
+                                        Python
+                                    </span>
+
+                                    <span>
+                                        MCP
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </button>
+
+
+
+                        <!-- =================================
+                             PROJECT 2
+                             ================================= -->
+
+                        <button class="project-item"
+                                data-category="ai rag"
+                                onclick="openProject('rag')">
+
+                            <div class="project-icon">
+                                📚
+                            </div>
+
+                            <div class="project-info">
+
+                                <h2>
+                                    Systems Programming RAG
+                                </h2>
+
+                                <p>
+                                    Semantic document retrieval service
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span>
+                                        RAG
+                                    </span>
+
+                                    <span>
+                                        ChromaDB
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </button>
+
+
+
+                        <!-- =================================
+                             PROJECT 3
+                             ================================= -->
+
+                        <button class="project-item"
+                                data-category="ai mcp"
+                                onclick="openProject('wcag')">
+
+                            <div class="project-icon">
+                                ♿
+                            </div>
+
+                            <div class="project-info">
+
+                                <h2>
+                                    WCAG Compliance Agent
+                                </h2>
+
+                                <p>
+                                    Agentic accessibility investigation
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span>
+                                        Agentic AI
+                                    </span>
+
+                                    <span>
+                                        MCP
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </button>
+
+
+
+                        <!-- =================================
+                             PROJECT 4
+                             ================================= -->
+
+                        <button class="project-item"
+                                data-category="ai mcp"
+                                onclick="openProject('jira')">
+
+                            <div class="project-icon">
+                                🔌
+                            </div>
+
+                            <div class="project-info">
+
+                                <h2>
+                                    JIRA Remote MCP
+                                </h2>
+
+                                <p>
+                                    AI access to JIRA information
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span>
+                                        MCP
+                                    </span>
+
+                                    <span>
+                                        API
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </button>
+
+
+
+                        <!-- =================================
+                             PROJECT 5
+                             ================================= -->
+
+                        <button class="project-item"
+                                data-category="backend"
+                                onclick="openProject('blog')">
+
+                            <div class="project-icon">
+                                🌐
+                            </div>
+
+                            <div class="project-info">
+
+                                <h2>
+                                    Blog CMS
+                                </h2>
+
+                                <p>
+                                    PHP and MySQL content management system
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span>
+                                        PHP
+                                    </span>
+
+                                    <span>
+                                        MySQL
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </button>
+
+
+
+                        <!-- =================================
+                             PROJECT 6
+                             ================================= -->
+
+                        <button class="project-item"
+                                data-category="backend"
+                                onclick="openProject('airbnb')">
+
+                            <div class="project-icon">
+                                📊
+                            </div>
+
+                            <div class="project-info">
+
+                                <h2>
+                                    Airbnb Data Processing
+                                </h2>
+
+                                <p>
+                                    Cleaning 42,000+ records with R
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span>
+                                        R
+                                    </span>
+
+                                    <span>
+                                        Analytics
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </button>
+
+
+                    </div>
+
+                </main>
+
+            </div>
+
+
+
+            <!-- Status Bar -->
+
+            <div class="status-bar">
+
+                <p id="statusText">
+                    6 projects
+                </p>
+
+                <p>
+                    GitHub Portfolio
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         ABOUT WINDOW
+         ================================================= -->
+
+    <div class="window glass popup-window"
+         id="aboutWindow">
+
+
+        <div class="title-bar">
+
+            <div class="title-bar-text">
+
+                👤 About Sahil
+
+            </div>
+
+
+            <div class="title-bar-controls">
+
+                <button aria-label="Close"
+                        onclick="closeAbout()">
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="window-body">
+
+            <div class="about-popup">
+
+                <div class="about-avatar">
+                    &lt;/&gt;
+                </div>
+
+                <h2>
+                    Shaik Sahil Rizwan
+                </h2>
+
+                <p class="about-role">
+                    AI Engineer
+                </p>
+
+                <p>
+
+                    AI Engineer focused on Generative AI,
+                    Agentic AI, MCP, RAG, LLMs and
+                    Python-based AI applications.
+
+                </p>
+
+                <div class="about-links">
+
+                    <a href="index.html">
+                        View Portfolio
+                    </a>
+
+                    <a href="https://github.com/shaiksahilrizwan"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/shaik-sahil-rizwan/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         PROJECT DETAIL WINDOWS
+         ================================================= -->
+
+
+    <div class="window glass detail-window"
+         id="mysql-mcp">
+
+        <div class="title-bar">
+
+            <div class="title-bar-text">
+                🗄️ stdio-mysql-mcp
+            </div>
+
+            <div class="title-bar-controls">
+
+                <button aria-label="Close"
+                        onclick="closeProject('mysql-mcp')">
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="window-body project-detail">
+
+            <h2>
+                stdio-mysql-mcp
+            </h2>
+
+            <p class="detail-subtitle">
+                Open-source Python MCP server
+            </p>
+
+            <p>
+
+                Enables AI applications and LLM-based agents
+                to interact with MySQL databases through
+                standardized Model Context Protocol tools.
+
+            </p>
+
+            <h3>
+                Technologies
+            </h3>
+
+            <div class="detail-tags">
+
+                <span>Python</span>
+                <span>MCP</span>
+                <span>FastMCP</span>
+                <span>MySQL</span>
+
+            </div>
+
+            <div class="detail-actions">
+
+                <a href="https://github.com/shaiksahilrizwan"
+                   target="_blank">
+
+                    GitHub
+
+                </a>
+
+                <a href="https://pypi.org/"
+                   target="_blank">
+
+                    PyPI
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="window glass detail-window"
+         id="rag">
+
+        <div class="title-bar">
+
+            <div class="title-bar-text">
+                📚 Systems Programming RAG
+            </div>
+
+            <div class="title-bar-controls">
+
+                <button aria-label="Close"
+                        onclick="closeProject('rag')">
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="window-body project-detail">
+
+            <h2>
+                Systems Programming Book RAG
+            </h2>
+
+            <p class="detail-subtitle">
+                Retrieval-Augmented Generation
+            </p>
+
+            <p>
+
+                Built an end-to-end RAG pipeline supporting
+                document ingestion, chunking, embedding
+                generation, vector storage and semantic
+                retrieval.
+
+            </p>
+
+            <h3>
+                Technologies
+            </h3>
+
+            <div class="detail-tags">
+
+                <span>Python</span>
+                <span>LangChain</span>
+                <span>FastAPI</span>
+                <span>ChromaDB</span>
+                <span>Embeddings</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="window glass detail-window"
+         id="wcag">
+
+        <div class="title-bar">
+
+            <div class="title-bar-text">
+                ♿ WCAG Compliance Agent
+            </div>
+
+            <div class="title-bar-controls">
+
+                <button aria-label="Close"
+                        onclick="closeProject('wcag')">
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="window-body project-detail">
+
+            <h2>
+                WCAG Compliance AI Agent
+            </h2>
+
+            <p class="detail-subtitle">
+                Enterprise Agentic AI
+            </p>
+
+            <p>
+
+                An AI agent that investigates websites,
+                selects specialized tools, gathers evidence
+                and combines tool outputs with LLM reasoning
+                to support WCAG compliance assessment.
+
+            </p>
+
+            <h3>
+                Technologies
+            </h3>
+
+            <div class="detail-tags">
+
+                <span>Python</span>
+                <span>LangChain</span>
+                <span>MCP</span>
+                <span>FastMCP</span>
+                <span>LLMs</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="window glass detail-window"
+         id="jira">
+
+        <div class="title-bar">
+
+            <div class="title-bar-text">
+                🔌 JIRA Remote MCP
+            </div>
+
+            <div class="title-bar-controls">
+
+                <button aria-label="Close"
+                        onclick="closeProject('jira')">
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="window-body project-detail">
+
+            <h2>
+                JIRA Remote MCP Server
+            </h2>
+
+            <p class="detail-subtitle">
+                Enterprise Tool Integration
+            </p>
+
+            <p>
+
+                A custom remote MCP server exposing JIRA
+                functionality through structured tools,
+                allowing AI workflows to retrieve relevant
+                issue and project information.
+
+            </p>
+
+            <h3>
+                Technologies
+            </h3>
+
+            <div class="detail-tags">
+
+                <span>MCP</span>
+                <span>Python</span>
+                <span>REST APIs</span>
+                <span>Tool Calling</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="window glass detail-window"
+         id="blog">
+
+        <div class="title-bar">
+
+            <div class="title-bar-text">
+                🌐 Blog CMS
+            </div>
+
+            <div class="title-bar-controls">
+
+                <button aria-label="Close"
+                        onclick="closeProject('blog')">
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="window-body project-detail">
+
+            <h2>
+                Blog Website CMS
+            </h2>
+
+            <p class="detail-subtitle">
+                Backend Application
+            </p>
+
+            <p>
+
+                Developed a CMS backend with PHP and MySQL
+                including authentication, roles, sessions,
+                dynamic data retrieval and media upload.
+
+            </p>
+
+            <h3>
+                Technologies
+            </h3>
+
+            <div class="detail-tags">
+
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Authentication</span>
+                <span>CMS</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="window glass detail-window"
+         id="airbnb">
+
+        <div class="title-bar">
+
+            <div class="title-bar-text">
+                📊 Airbnb Data Processing
+            </div>
+
+            <div class="title-bar-controls">
+
+                <button aria-label="Close"
+                        onclick="closeProject('airbnb')">
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="window-body project-detail">
+
+            <h2>
+                Airbnb Dataset Processing
+            </h2>
+
+            <p class="detail-subtitle">
+                Data Cleaning & Analytics
+            </p>
+
+            <p>
+
+                Cleaned and transformed more than 42,000
+                Airbnb records using R, including missing
+                value handling and preparation for analytics.
+
+            </p>
+
+            <h3>
+                Technologies
+            </h3>
+
+            <div class="detail-tags">
+
+                <span>R</span>
+                <span>Data Cleaning</span>
+                <span>Data Wrangling</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         TASKBAR
+         ================================================= -->
+
+    <div class="taskbar">
+
+
+        <button class="start-button"
+                onclick="toggleStartMenu()">
+
+            <span class="windows-logo">
+                ⊞
+            </span>
+
+            <span>
+                start
+            </span>
+
+        </button>
+
+
+        <button class="taskbar-app active"
+                onclick="restoreProjects()">
+
+            📁
+            <span>
+                Projects
+            </span>
+
+        </button>
+
+
+        <div class="taskbar-right">
+
+            <span>
+                🔊
+            </span>
+
+            <span>
+                🌐
+            </span>
+
+            <span id="clock">
+                12:00
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         START MENU
+         ================================================= -->
+
+    <div class="start-menu"
+         id="startMenu">
+
+        <div class="start-profile">
+
+            <div class="profile-circle">
+                SR
+            </div>
+
+            <div>
+
+                <strong>
+                    Shaik Sahil Rizwan
+                </strong>
+
+                <small>
+                    AI Engineer
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="start-items">
+
+            <a href="index.html">
+                🏠 Portfolio Home
+            </a>
 
             <a href="https://github.com/shaiksahilrizwan"
-               target="_blank"
-               class="btn btn-primary">
-
-                GitHub ↗
-
+               target="_blank">
+                💻 GitHub
             </a>
+
+            <a href="https://www.linkedin.com/in/shaik-sahil-rizwan/"
+               target="_blank">
+                💼 LinkedIn
+            </a>
+
+        </div>
+
+
+        <div class="start-footer">
+
+            <button onclick="toggleStartMenu()">
+                Cancel
+            </button>
 
         </div>
 
     </div>
 
-</section>
 
+</div>
 
 
-<!-- =====================================================
-     PROJECTS
-     ===================================================== -->
-
-<section class="section">
-
-    <div class="section-container">
-
-
-        <!-- PROJECT 01 -->
-
-        <article class="project-showcase">
-
-            <div class="project-number">
-                01
-            </div>
-
-
-            <div class="project-main">
-
-                <div class="project-meta">
-
-                    OPEN SOURCE · PYPI
-
-                </div>
-
-
-                <h2>
-                    stdio-mysql-mcp
-                </h2>
-
-
-                <p>
-
-                    An open-source Python MCP server that enables
-                    AI applications and LLM-based agents to interact
-                    with MySQL databases through the Model Context
-                    Protocol.
-
-                </p>
-
-
-                <div class="tech-tags">
-
-                    <span>Python</span>
-                    <span>MCP</span>
-                    <span>FastMCP</span>
-                    <span>MySQL</span>
-                    <span>LLM</span>
-
-                </div>
-
-
-                <div class="project-actions">
-
-                    <a href="https://github.com/shaiksahilrizwan"
-                       target="_blank">
-
-                        GitHub →
-
-                    </a>
-
-                    <a href="https://pypi.org/"
-                       target="_blank">
-
-                        PyPI →
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-visual">
-
-<pre>
-┌─────────────────────┐
-│      AI Agent       │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│    MCP Protocol     │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  MySQL MCP Server   │
-└──────────┬──────────┘
-           │
-           ▼
-       MySQL DB
-</pre>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 02 -->
-
-        <article class="project-showcase">
-
-            <div class="project-number">
-                02
-            </div>
-
-
-            <div class="project-main">
-
-                <div class="project-meta">
-
-                    GENERATIVE AI · RAG
-
-                </div>
-
-
-                <h2>
-                    Systems Programming
-                    Book RAG Service
-                </h2>
-
-
-                <p>
-
-                    An end-to-end Retrieval-Augmented Generation
-                    pipeline that processes technical documents,
-                    generates embeddings and performs semantic
-                    retrieval to provide knowledge-grounded context
-                    for AI applications.
-
-                </p>
-
-
-                <div class="tech-tags">
-
-                    <span>Python</span>
-                    <span>LangChain</span>
-                    <span>FastAPI</span>
-                    <span>ChromaDB</span>
-                    <span>Embeddings</span>
-                    <span>RAG</span>
-
-                </div>
-
-
-                <div class="project-actions">
-
-                    <a href="https://github.com/shaiksahilrizwan"
-                       target="_blank">
-
-                        GitHub →
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-visual">
-
-<pre>
-     Document
-        │
-        ▼
-┌──────────────┐
-│   Chunking   │
-└──────┬───────┘
-       │
-       ▼
-┌──────────────┐
-│  Embeddings  │
-└──────┬───────┘
-       │
-       ▼
-┌──────────────┐
-│  ChromaDB    │
-└──────┬───────┘
-       │
-       ▼
- Semantic Search
-       │
-       ▼
- Relevant Context
-</pre>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 03 -->
-
-        <article class="project-showcase">
-
-            <div class="project-number">
-                03
-            </div>
-
-
-            <div class="project-main">
-
-                <div class="project-meta">
-
-                    AGENTIC AI · ENTERPRISE
-
-                </div>
-
-
-                <h2>
-                    WCAG Compliance AI Agent
-                </h2>
-
-
-                <p>
-
-                    An agentic AI workflow designed to investigate
-                    websites for accessibility issues. The agent
-                    dynamically selects specialized tools, gathers
-                    evidence and combines tool outputs with LLM
-                    reasoning to support WCAG compliance assessment.
-
-                </p>
-
-
-                <div class="tech-tags">
-
-                    <span>Python</span>
-                    <span>LangChain</span>
-                    <span>MCP</span>
-                    <span>FastMCP</span>
-                    <span>LLMs</span>
-                    <span>Agentic AI</span>
-
-                </div>
-
-
-                <div class="project-actions">
-
-                    <a href="index.html#experience">
-
-                        Experience →
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-visual">
-
-<pre>
-       Website
-          │
-          ▼
-    ┌───────────┐
-    │ AI Agent  │
-    └─────┬─────┘
-          │
-     Tool Selection
-          │
-     ┌────┴────┐
-     ▼         ▼
-   MCP       MCP
-  Tool A    Tool B
-     │         │
-     └────┬────┘
-          ▼
-       Evidence
-          │
-          ▼
-     LLM Reasoning
-          │
-          ▼
-   WCAG Assessment
-</pre>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 04 -->
-
-        <article class="project-showcase">
-
-            <div class="project-number">
-                04
-            </div>
-
-
-            <div class="project-main">
-
-                <div class="project-meta">
-
-                    ENTERPRISE AI · MCP
-
-                </div>
-
-
-                <h2>
-                    JIRA Remote MCP Server
-                </h2>
-
-
-                <p>
-
-                    A custom remote MCP server exposing JIRA
-                    functionality through structured tools,
-                    enabling AI workflows to retrieve relevant
-                    issue and project information through
-                    controlled tool access.
-
-                </p>
-
-
-                <div class="tech-tags">
-
-                    <span>MCP</span>
-                    <span>Python</span>
-                    <span>APIs</span>
-                    <span>Tool Calling</span>
-                    <span>Enterprise AI</span>
-
-                </div>
-
-
-                <div class="project-actions">
-
-                    <a href="index.html#experience">
-
-                        Related Experience →
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-visual">
-
-<pre>
-       AI Workflow
-            │
-            ▼
-      MCP Client
-            │
-            ▼
-┌────────────────────┐
-│ Remote JIRA MCP    │
-│      Server        │
-└─────────┬──────────┘
-          │
-          ▼
-       JIRA API
-          │
-          ▼
-   Issues / Projects
-</pre>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 05 -->
-
-        <article class="project-showcase">
-
-            <div class="project-number">
-                05
-            </div>
-
-
-            <div class="project-main">
-
-                <div class="project-meta">
-
-                    DATA ENGINEERING · R
-
-                </div>
-
-
-                <h2>
-                    Airbnb Dataset
-                    Data Processing
-                </h2>
-
-
-                <p>
-
-                    Processed and cleaned more than 42,000 Airbnb
-                    records using R, performing data transformation,
-                    missing-value handling and preparation for
-                    downstream analytics.
-
-                </p>
-
-
-                <div class="tech-tags">
-
-                    <span>R</span>
-                    <span>Data Cleaning</span>
-                    <span>Data Wrangling</span>
-                    <span>Analytics</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-visual">
-
-<pre>
-Raw Dataset
-     │
-     ▼
-Data Cleaning
-     │
-     ▼
-Missing Values
-     │
-     ▼
-Transformation
-     │
-     ▼
-42,000+
-Records
-     │
-     ▼
-Analytics Ready
-</pre>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 06 -->
-
-        <article class="project-showcase">
-
-            <div class="project-number">
-                06
-            </div>
-
-
-            <div class="project-main">
-
-                <div class="project-meta">
-
-                    BACKEND · PHP · MYSQL
-
-                </div>
-
-
-                <h2>
-                    Blog Website CMS
-                </h2>
-
-
-                <p>
-
-                    Developed a backend content management system
-                    with PHP and MySQL including authentication,
-                    role management, dynamic data retrieval,
-                    sessions and media upload functionality.
-
-                </p>
-
-
-                <div class="tech-tags">
-
-                    <span>PHP</span>
-                    <span>MySQL</span>
-                    <span>Authentication</span>
-                    <span>CMS</span>
-
-                </div>
-
-
-                <div class="project-actions">
-
-                    <a href="https://github.com/shaiksahilrizwan"
-                       target="_blank">
-
-                        GitHub →
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-visual">
-
-<pre>
-     User
-      │
-      ▼
- ┌─────────┐
- │  Login  │
- └────┬────┘
-      │
-      ▼
- ┌─────────┐
- │  Role   │
- │ Check   │
- └────┬────┘
-      │
-      ▼
-   CMS
-      │
-      ▼
-  MySQL DB
-</pre>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PROJECT CTA
-     ===================================================== -->
-
-<section class="contact-section">
-
-    <div class="contact-content">
-
-        <div class="section-label">
-            MORE ON GITHUB
-        </div>
-
-
-        <h2>
-
-            More experiments.
-            <span>More systems.</span>
-
-        </h2>
-
-
-        <p>
-
-            I continuously experiment with AI agents,
-            MCP servers, RAG pipelines and developer tools.
-
-        </p>
-
-
-        <div class="contact-buttons">
-
-            <a href="https://github.com/shaiksahilrizwan"
-               target="_blank"
-               class="btn btn-primary">
-
-                Visit GitHub →
-
-            </a>
-
-
-            <a href="index.html"
-               class="btn btn-secondary">
-
-                Back Home
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
-
-<footer>
-
-    <p>
-        © 2026 Shaik Sahil Rizwan
-    </p>
-
-    <p>
-        AI Engineer · GenAI · Agentic AI · MCP
-    </p>
-
-</footer>
-
-
-
-<script src="script.js"></script>
+<script src="projects-win7.js"></script>
 
 </body>
 
